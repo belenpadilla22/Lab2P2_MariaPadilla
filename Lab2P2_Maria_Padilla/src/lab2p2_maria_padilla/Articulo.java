@@ -61,5 +61,10 @@ public class Articulo {
     public void setAcceso(String acceso) {
         this.acceso = acceso;
     }
+
+    @Override
+    public String toString() {
+        return "Articulo{" + "titulo=" + titulo + ", autor=" + autor + ", tema=" + tema + ", fecha=" + fecha + ", acceso=" + acceso + '}';
+    }
     
 }

@@ -50,13 +50,25 @@ public class Lab2P2_Maria_Padilla {
                  System.out.println("2.Crear recursos: ");
                  System.out.println(" Ingrese la opcion");
                  int option=leer.nextInt();
-                 if (option==1){
-                     listar();
+                 while (option>0 && option<3){
+                     switch (option){
+                         case 1:
+                             listar();
+                             break;
+                         case 2:
+                             crear();
+                             break;
+                     
+                     
+                     
+                     }
+                 System.out.println("---------------------------------------------------");
+                 System.out.println(" SISTEMA DE INVETARIO DE BIBLIOTECA VIRTUAL");
+                 System.out.println("1. Listar recursos: ");
+                 System.out.println("2.Crear recursos: ");
+                 System.out.println(" Ingrese la opcion");
+                 option=leer.nextInt();
                  }
-                 if (option==2){
-                     crear();
-                 }
-                
                 }
                 if (comp.getTipoUsuario().equals("Bibliotecano")){
                    System.out.println("---------------------------------------------------");
@@ -186,7 +198,7 @@ public class Lab2P2_Maria_Padilla {
     }
     public static void listarLibros(){
         for (Libro l : Libros) {
-            System.out.println(l);
+            System.out.println(l.toString());
         }
     
     }

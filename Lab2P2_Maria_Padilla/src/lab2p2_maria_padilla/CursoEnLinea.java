@@ -52,4 +52,10 @@ public class CursoEnLinea {
 
     public CursoEnLinea() {
     }
+
+    @Override
+    public String toString() {
+        return "CursoEnLinea{" + "titulo=" + titulo + ", instructor=" + instructor + ", duracion=" + duracion + ", plataformas=" + plataformas + '}';
+    }
+    
 }

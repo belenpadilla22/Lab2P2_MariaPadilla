@@ -55,5 +55,10 @@ public class ConferenciaVirtual {
     public void setEnlace(String enlace) {
         this.enlace = enlace;
     }
+
+    @Override
+    public String toString() {
+        return "ConferenciaVirtual{" + "titulo=" + titulo + ", conferencista=" + conferencista + ", fecha=" + fecha + ", duracion=" + duracion + ", enlace=" + enlace + '}';
+    }
     
 }
