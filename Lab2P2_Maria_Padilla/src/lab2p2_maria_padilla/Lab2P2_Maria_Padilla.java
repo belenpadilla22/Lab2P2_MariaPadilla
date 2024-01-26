@@ -1,20 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package lab2p2_maria_padilla;
 
-/**
- *
- * @author belen
- */
-public class Lab2P2_Maria_Padilla {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class Lab2P2_Maria_Padilla {
+    static Scanner leer=new Scanner (System.in);
+
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        //int option=0;
+         System.out.println(" SISTEMA DE INVETARIO DE BIBLIOTECA VIRTUAL");
+         System.out.println("1. Listar recursos: ");
+         System.out.println("2.Crear recursos: ");
+         System.out.println("3.Eliminar recursos: ");
+         System.out.println("4. Modificar recurso: ");
+         System.out.println("5. Salir: ");
+         System.out.println("Ingrese una opcion: ");
+         int option=leer.nextInt();
+        while (option!=5){
+            System.out.println(" SISTEMA DE INVETARIO DE BIBLIOTECA VIRTUAL");
+            System.out.println("1. Listar recursos: ");
+            System.out.println("2.Crear recursos: ");
+            System.out.println("3.Eliminar recursos: ");
+            System.out.println("4. Modificar recurso: ");
+            System.out.println("5. Salir: ");
+            System.out.println("Ingrese una opcion: ");
+            option=leer.nextInt();
+        
+        
+        
+        
+        }
+        
+        
+       
     }
     
 }
