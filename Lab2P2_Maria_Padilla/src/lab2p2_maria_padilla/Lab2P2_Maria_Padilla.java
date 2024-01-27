@@ -178,8 +178,6 @@ public class Lab2P2_Maria_Padilla {
     }
     
     
-    
-    
     public static void crear (){
         
         System.out.println(" Ingrese una opcion:  ");
@@ -436,8 +434,7 @@ public class Lab2P2_Maria_Padilla {
         for (int i = 0; i < Libros.size(); i++) {
         if (Libros.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
             Libros.get(i).setTitulo(nueva);
-            System.out.println( Libros.get(i));
-            
+         
         }
     }
 
