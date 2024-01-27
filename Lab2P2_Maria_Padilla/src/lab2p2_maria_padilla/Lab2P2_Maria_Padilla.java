@@ -159,6 +159,7 @@ public class Lab2P2_Maria_Padilla {
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
         System.out.println("4. Conferencias virtuales ");
+        System.out.println("5. Salir ");
         int op=leer.nextInt();
         if (op==1){
             listarLibros();
@@ -289,6 +290,7 @@ public class Lab2P2_Maria_Padilla {
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
         System.out.println("4. Conferencias virtuales ");
+        System.out.println("5. Salir ");
         int op=leer.nextInt();
         while (op>0 && op<5){
             switch (op){
@@ -320,7 +322,8 @@ public class Lab2P2_Maria_Padilla {
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
         System.out.println("4. Conferencias virtuales ");
-         op=leer.nextInt();
+        System.out.println("5. Salir ");
+        op=leer.nextInt();
         }
         
     }
@@ -380,6 +383,7 @@ public class Lab2P2_Maria_Padilla {
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
         System.out.println("4. Conferencias virtuales ");
+        System.out.println("5. Salir ");
         int op=leer.nextInt();
         while (op>0 && op<5){
             switch (op){
@@ -420,6 +424,7 @@ public class Lab2P2_Maria_Padilla {
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
         System.out.println("4. Conferencias virtuales ");
+        System.out.println("5. Salir ");
         op=leer.nextInt();
         
         }
