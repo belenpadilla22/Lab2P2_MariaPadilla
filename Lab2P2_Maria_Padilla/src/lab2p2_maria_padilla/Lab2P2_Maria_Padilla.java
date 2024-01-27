@@ -16,16 +16,48 @@ public class Lab2P2_Maria_Padilla {
     
     public static void main(String[] args) {
         //int option=0;
+        boolean salida=true;
         Usuario usario1=new Usuario("Pedro","1231","Estudiante");
         usuarios.add(usario1);
         Usuario usario2=new Usuario("Maria","2310","Profesor");
         usuarios.add(usario2);
-        Usuario usario3=new Usuario("Antonio","3245","Bbliotecano");
+        Usuario usario3=new Usuario("Antonio","3245","Bibliotecano");
         usuarios.add(usario3);
-         System.out.println(" Ingrese su nombre: ");
+      
+        System.out.println(" M E N U ");
+        System.out.println(" 1. Ingresar: ");
+        System.out.println(" 2. Salir ");
+        int op=leer.nextInt();
+        while (op>0 && op<2){
+            switch (op){
+                case 1: 
+                     login();
+                    break;
+               
+            
+            
+            }
+        
+        System.out.println(" M E N U ");
+        System.out.println(" 1. Ingresar: ");
+        System.out.println(" 2. Salir ");
+         op=leer.nextInt();
+        }
+        
+        
+       
+
+        
+       
+       
+  
+    }
+    public static void login (){
+        System.out.println(" Ingrese su nombre: ");
         String name=leer.next();
         System.out.println(" Ingrese la contraseña: ");
         String contra=leer.next();
+            
         Usuario user=new Usuario () ;
         for (Usuario comp : usuarios) {
             if (comp.getNombre().equals(name) && comp.getContra().equals(contra)){
@@ -80,6 +112,34 @@ public class Lab2P2_Maria_Padilla {
                    System.out.println("5. Salir: ");
                    System.out.println("Ingrese una opcion: ");
                    int option=leer.nextInt();
+                   while (option>0 && option<5){
+                     switch (option){
+                         case 1:
+                             listar();
+                             break;
+                         case 2:
+                             crear();
+                             break;
+                         case 3:
+                             eliminar();
+                             break;
+                         case 4:
+                             Modificar();
+                             break;
+                     
+                     
+                     
+                     }
+                 System.out.println("---------------------------------------------------");
+                 System.out.println(" SISTEMA DE INVETARIO DE BIBLIOTECA VIRTUAL");
+                 System.out.println("1. Listar recursos: ");
+                 System.out.println("2.Crear recursos: ");
+                 System.out.println("3.Eliminar recursos: ");
+                 System.out.println("4. Modificar recurso: ");
+                 System.out.println("5. Salir: ");
+                 System.out.println(" Ingrese la opcion");
+                 option=leer.nextInt();
+                 }
 
                 
                 }
@@ -87,7 +147,11 @@ public class Lab2P2_Maria_Padilla {
 
             }
         }
-  
+        
+        
+    
+    
+    
     }
     public static void listar (){
         System.out.println(" Ingrese lo que desea listar ");
@@ -220,6 +284,138 @@ public class Lab2P2_Maria_Padilla {
         }
     
     }
+    public static void eliminar (){
+       
+        System.out.println(" Ingrese lo que desea eliminar ");
+        System.out.println("1. Libro ");
+        System.out.println("2. Articulo ");
+        System.out.println("3. Cursos en linea ");
+        System.out.println("4. Conferencias virtuales ");
+        int op=leer.nextInt();
+        while (op>0 && op<5){
+            switch (op){
+                case 1:
+                    System.out.println(" Ingrese lo que desea eliminar ");
+                    String titulo=leer.next();
+                    eliminarLibro(titulo);
+                    break;
+                case 2:
+                    System.out.println(" Ingrese lo que desea eliminar ");
+                    String titulo2=leer.next();
+                    eliminarArticulo(titulo2);
+                    
+                    break;
+                case 3:
+                    System.out.println(" Ingrese lo que desea eliminar ");
+                    String titulo3=leer.next();
+                    eliminarCurso(titulo3);
+                    
+                    break;
+                case 4:
+                    System.out.println(" Ingrese lo que desea eliminar ");
+                    String titulo4=leer.next();
+                    eliminarConferencia(titulo4);
+                    break;
+            }
+        System.out.println(" Ingrese lo que desea eliminar ");
+        System.out.println("1. Libro ");
+        System.out.println("2. Articulo ");
+        System.out.println("3. Cursos en linea ");
+        System.out.println("4. Conferencias virtuales ");
+         op=leer.nextInt();
+        }
+        
+    }
     
+    public static void eliminarLibro (String titulo){
+          boolean existe=false;
+            for (int i = 0; i < Libros.size(); i++) {
+                if (Libros.get(i).getTitulo().equals(titulo)){
+                    existe=true;
+                    Libros.remove(i);
+                    System.out.println(titulo);
+                }
+    }
+    
+       
+    }
+     public static void eliminarArticulo (String titulo){
+          boolean existe=false;
+            for (int i = 0; i < articulos.size(); i++) {
+                if (articulos.get(i).getTitulo().equals(titulo)){
+                    existe=true;
+                    articulos.remove(i);
+                    System.out.println(titulo);
+                }
+    }
+    
+       
+    }
+     public static void eliminarCurso (String titulo){
+          boolean existe=false;
+            for (int i = 0; i < cursos.size(); i++) {
+                if (cursos.get(i).getTitulo().equals(titulo)){
+                    existe=true;
+                    cursos.remove(i);
+                    System.out.println(titulo);
+                }
+    }
+    
+       
+    }
+     public static void eliminarConferencia (String titulo){
+          boolean existe=false;
+            for (int i = 0; i < conferencias.size(); i++) {
+                if (conferencias.get(i).getTitulo().equals(titulo)){
+                    existe=true;
+                    conferencias.remove(i);
+                    System.out.println(titulo);
+                }
+    }
+    
+       
+    }
+     
+     public static void Modificar (){
+        System.out.println(" Ingrese lo que desea modificar ");
+        System.out.println("1. Libro ");
+        System.out.println("2. Articulo ");
+        System.out.println("3. Cursos en linea ");
+        System.out.println("4. Conferencias virtuales ");
+        int op=leer.nextInt();
+        while (op>0 && op<5){
+            switch (op){
+                case 1:
+                    System.out.println(" Ingrese el titulo ");
+                    String name=leer.next();
+                    System.out.println(" Ingrese la nueva informacion: ");
+                     String nuevo=leer.next();
+                     modiLibro(name, nuevo);
+                    break;
+                    
+            
+            
+            }
+        
+        }
+        
+        
+     
+     
+     
+     }
+     public static void modiLibro(String busquedad, String nueva){
+        
+        for (int i = 0; i < Libros.size(); i++) {
+        if (Libros.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
+            Libros.get(i).setTitulo(nueva);
+            System.out.println( Libros.get(i));
+            
+        }
+    }
+
+     
+     }
+      
     
 }
