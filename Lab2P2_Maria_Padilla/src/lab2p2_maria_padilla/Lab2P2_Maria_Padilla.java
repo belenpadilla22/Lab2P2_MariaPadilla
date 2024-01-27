@@ -182,7 +182,7 @@ public class Lab2P2_Maria_Padilla {
     
     public static void crear (){
         
-        System.out.println(" Ingrese lo que desea crear ");
+        System.out.println(" Ingrese una opcion:  ");
         System.out.println("1. Libro ");
         System.out.println("2. Articulo ");
         System.out.println("3. Cursos en linea ");
@@ -392,10 +392,37 @@ public class Lab2P2_Maria_Padilla {
                      String nuevo=leer.next();
                      modiLibro(name, nuevo);
                     break;
+                case 2:
+                     System.out.println(" Ingrese el titulo ");
+                     name=leer.next();
+                    System.out.println(" Ingrese la nueva informacion: ");
+                     nuevo=leer.next();
+                     modiArti(name, nuevo);
+                    break;
+                case 3:
+                     System.out.println(" Ingrese el titulo ");
+                     name=leer.next();
+                    System.out.println(" Ingrese la nueva informacion: ");
+                     nuevo=leer.next();
+                     modicurso(name, nuevo);
+                    break;
+                case 4:
+                     System.out.println(" Ingrese el titulo ");
+                     name=leer.next();
+                     System.out.println(" Ingrese la nueva informacion: ");
+                     nuevo=leer.next();
+                     modiConfe(name, nuevo);
+                    break;
                     
             
             
             }
+        System.out.println(" Ingrese lo que desea modificar ");
+        System.out.println("1. Libro ");
+        System.out.println("2. Articulo ");
+        System.out.println("3. Cursos en linea ");
+        System.out.println("4. Conferencias virtuales ");
+        op=leer.nextInt();
         
         }
         
@@ -410,6 +437,42 @@ public class Lab2P2_Maria_Padilla {
         if (Libros.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
             Libros.get(i).setTitulo(nueva);
             System.out.println( Libros.get(i));
+            
+        }
+    }
+
+     
+     }
+      public static void modiArti(String busquedad, String nueva){
+        
+        for (int i = 0; i < articulos.size(); i++) {
+        if (articulos.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
+            articulos.get(i).setTitulo(nueva);
+            System.out.println( articulos.get(i));
+            
+        }
+    }
+
+     
+     }
+       public static void modicurso(String busquedad, String nueva){
+        
+        for (int i = 0; i < cursos.size(); i++) {
+        if (cursos.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
+            cursos.get(i).setTitulo(nueva);
+            System.out.println( cursos.get(i));
+            
+        }
+    }
+
+     
+     }
+        public static void modiConfe(String busquedad, String nueva){
+        
+        for (int i = 0; i < conferencias.size(); i++) {
+        if (conferencias.get(i).getTitulo().equalsIgnoreCase(busquedad)) {
+            conferencias.get(i).setTitulo(nueva);
+            System.out.println( conferencias.get(i));
             
         }
     }
